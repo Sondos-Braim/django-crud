@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block main %}
+<a href="{% url 'home' %}">Home</a>
+<h4>Title: {{movie.title}}</h4>
+<h4>Director: {{movie.director}}</h4>
+<h4>Rate: {{movie.rate}}</h4>
+<h4>Description: {{movie.description}}</h4>
+<a href="{% url 'update' movie.pk %}">Update</a>
+<a href="{% url 'delete' movie.pk %}">Delete</a>
+{% endblock main %}
